@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>CC-Board Games</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerboard">
+            <div class="headerL"><a href="/sign_in">Register</a>|<a href="/sign_in">Login</a></div>
+            <div class="headerR"><a href="">Shopping Cart</a><img src="" alt="">THIS IS WHERE THE PIC GOES</div>
+        </div>
+        <div class="merch">
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/BoardGames/ExplodingKitten.jpg')}}" alt="pic1">
+                <p>Exploding Kittens - $19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/BoardGames/clue.webp')}}" alt="pic1">
+                <p>Clue - $19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/BoardGames/Monoply.jpg')}}" alt="pic1">
+                <p>Monopoly - $19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/BoardGames/GuessWho.jpg')}}" alt="pic1">
+                <p>Guess Who? - $19.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+</body>
+</html>

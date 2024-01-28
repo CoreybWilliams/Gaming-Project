@@ -1,0 +1,81 @@
+body {
+    margin: 0px;
+}
+h1{
+    padding: 20px;
+}
+/* Index */
+.bk{
+    background-color: rgb(163, 70, 163);
+    background-image: url(../pics/BG/castlelogo2.jpg) ;
+    background-position: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+.enterbutton{
+    padding-top: 8em;
+    font-size: 70px;
+    text-align: center;
+    align-items: center;
+}
+.buttonstyle{
+    background-color: black;
+    color:rgb(163, 70, 163);
+    border:none;
+    border-radius: 15px;
+    width: auto;
+    font-size: 30px;
+}
+/* pokemon */
+.merch{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imageadjust{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+/* pokemon page */
+.headerpokemon{
+    background-image: url(../pics/Pokemon/pokemonbanner.jpeg);
+    height: 500px;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+/* magic page */
+.headermagic{
+    background-image: url(../pics/MTG/magic_banner.webp);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.headerdcg{
+    background-image: url(../pics/DCG/dcg_banner.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.headerdnd{
+    background-image: url(../pics/D&D/dndbannermod.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.headerfab{
+    background-image: url(../pics/FAB/FandB.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.headerboard{
+    background-image: url(../pics/BoardGames/boardbanner.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}

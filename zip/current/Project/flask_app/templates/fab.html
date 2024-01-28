@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>CC-MTG</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerfab">
+            <div class="headerL"><a href="/sign_in">Register</a>|<a href="/sign_in">Login</a></div>
+            <div class="headerR"><a href="">Shopping Cart</a><img src="" alt="">THIS IS WHERE THE PIC GOES</div>
+        </div>
+        <div class="merch">
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/FAB/231040.webp')}}" alt="pic1">
+                <p>Monarch Booster Pack - $4.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/FAB/268765.webp')}}" alt="pic1">
+                <p>History Pack 1 Booster Pack - $4.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="center">
+                <img width="190px" src="{{url_for('static',filename='/pics/FAB/237758.webp')}}" alt="pic1">
+                <p>Prism Blitz Deck - $19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="center">
+                <img width="240px" src="{{url_for('static',filename='/pics/FAB/477233.webp')}}" alt="pic1">
+                <p>Outsiders Booster Box - $54.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+</body>
+</html>

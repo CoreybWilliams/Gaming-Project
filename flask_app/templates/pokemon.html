@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>CC-Pokemon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerpokemon">
+            <div class="headerL"><a href="/sign_in">Register</a> | <a href="/sign_in">Login</a> | <a href="/navigation">Home</a></div>
+            <div class="headerR"><a href="/payment"><h3 id="cart">{{ cart }}</h3><img src="{{url_for('static',filename='/pics/shopping/blackcart.png')}}" alt="cart" width="40px"></a><a href="/logout">Logout</a></div>
+        </div>
+        <div class="merch">
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/Pokemon/183485.jpg')}}" alt="pic1">
+                <p>Pokemon 1st Editon Booster Pack - $399.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="5">
+                    <input type="hidden" name="name_of_product" value="Pokemon 1st Editon Booster Pack">
+                    <input type="hidden" name="price" value="399.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/Pokemon/516KHDtOHHL.__AC_SX300_SY300_QL70_FMwebp_.webp')}}" alt="pic1">
+                <p>Pandoras Rift Gift Set - $19.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="6">
+                    <input type="hidden" name="name_of_product" value="Pandoras Rift Gift Set">
+                    <input type="hidden" name="price" value="19.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/Pokemon/91gU9wk0dNL.__AC_SX300_SY300_QL70_FMwebp_.webp')}}" alt="pic1">
+                <p>Obsidian Flames Booster Pack - $4.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="7">
+                    <input type="hidden" name="name_of_product" value="Obsidian Flames Booster Pack">
+                    <input type="hidden" name="price" value="4.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/Pokemon/71ARA+YjCfL._AC_SY300_SX300_.jpg')}}" alt="pic1">
+                <p>Scarlet and Violet Booster Pack - $4.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="8">
+                    <input type="hidden" name="name_of_product" value="Scarlet and Violet Booster Pack">
+                    <input type="hidden" name="price" value="4.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+<!-- <script>
+    function add(){
+        var h3 = document.getElementById("cart");
+        var cart = parseInt(h3.innerText);
+        cart++;
+        h3.innerText = cart;
+    }
+</script> -->
+</body>
+</html>

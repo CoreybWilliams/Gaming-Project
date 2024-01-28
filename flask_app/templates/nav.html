@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>Cardboard Castle</title>   
+    
+</head>
+<body class="wholepage">
+    <div class="container">
+      
+        <div class="header">
+            <div class="headerL"><a href="/sign_in">Register</a> | <a href="/sign_in">Login</a></div>
+            <div class="headerR"><a href="/payment"><img src="{{url_for('static',filename='/pics/shopping/cart.png')}}" alt="cart" width="40px"></a> <a href="/logout">Logout</a></div>
+        </div>
+        <div class="body">
+            <div class="row1">
+                <div><a href="/magic">
+                    <img src="{{url_for('static',filename='/pics/MTG/mtgLogo.png')}}" alt="Description of the image" width="300px">
+                </a></div>
+                <div><a href="/pokemon">
+                    <img width="350px" src="{{url_for('static',filename='/pics/Pokemon/Pokemon_logo.png')}}" alt="Description of the image" width="300px">
+                </a></div>
+            </div>
+            <div class="row1">
+                <div>
+                    <a href="/fab">
+                        <img height="160px" src="{{url_for('static',filename='/pics/FAB/FABlogo.png')}}" alt="Description of the image" width="300px">
+                    </a>
+                </div> 
+                <div>
+                    <a href="/dcg">
+                        <img height="160px", width="350px" src="{{url_for('static',filename='/pics/DCG/dcglogo.png')}}" alt="Description of the image" width="300px">
+                    </a>
+                </div>
+            </div>
+            <div class="row1">
+                <div>
+                    <a href="/dnd">
+                        <img src="{{url_for('static',filename='/pics/D&D/ddlogo.png')}}" alt="Description of the image" width="300px">
+                    </a>
+                </div>
+                <div>
+                    <a href="/board_games">
+                        <img width="350px" src="{{url_for('static',filename='/pics/BoardGames/BGlogo.png')}}" alt="Description of the image" width="300px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {#<a href="/pokemon">
+        <img src="{{url_for('static',filename='/pics/Pokemon/Pokemon_logo.png')}}" alt="pokemon logo" width="100px">
+    </a>#}
+
+
+</html>

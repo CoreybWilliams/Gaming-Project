@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around">
+        <form action="/card_info" method="post">
+            <h2>Please Enter Your Payment Information</h2>
+            {% with messages = get_flashed_messages %}
+                {% if messages %}>
+                    {% for message in messages %}
+                    <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div>
+                <label for="name_on_card">Name On Card:</label>
+                <input type="text" name="name_on_card">
+            </div>
+            
+            <div>
+                <label for="card_number">Credit Card Number:</label>
+                <input type="text" name="card_number">
+            </div>
+            <div>
+                <label for="expiration_date">Expiration Date (MM/YY):</label>
+                <input type="text" name="expiration_date">
+            </div>
+            <div>
+                <label for="cvc">CVC Code:</label>
+                <input type="text" name="cvc">
+            </div>
+            <input type="submit" value="Add Card" class="btn btn-primary">
+        </form>
+</body>
+</html>

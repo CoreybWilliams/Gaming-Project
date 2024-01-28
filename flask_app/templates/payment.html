@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>Payment Information</title>
+</head>
+<body>
+    <div class="headerpayment">
+        <div class="headerL"><a href="/sign_in">Register</a> | <a href="/sign_in">Login</a> | <a href="/navigation">Home</a></div>
+        <div class="headerR"><a href="/logout">Logout</a></div>
+    </div>
+        <div class="center_payment">
+            <div>
+                <form class="border" action="/card_info" method="post">
+                    <h2>Please Enter Your Payment Information</h2>
+                    {% with messages = get_flashed_messages(category_filter=['cc']) %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <div>
+                        <label for="name_on_card">Name On Card:</label>
+                        <input type="text" name="name_on_card">
+                    </div>
+                    
+                    <div>
+                        <label for="card_number">Credit Card Number:</label>
+                        <input type="text" name="card_number">
+                    </div>
+                    <div>
+                        <label for="expiration_date">Expiration Date (MM/YY):</label>
+                        <input type="text" name="expiration_date">
+                    </div>
+                    <div>
+                        <label for="CVC">CVC Code:</label>
+                        <input type="text" name="CVC">
+                    </div>
+                    <input type="submit" value="Add Card" class="btn btn-primary">
+                </form>
+
+            {% if products %}
+                <h2>Selected Products:</h2>
+                <ul>
+                {% for product in products %}
+                    <li>{{ product[1] }} - ${{ product[2] }}</li>
+                {% endfor %}
+                </ul>
+                <p>Total Price: ${{ total_price }}</p>
+            {% else %}
+                <p>No products selected for payment.</p>
+            {% endif %}
+        <form action="/logoutcc">
+            <input type="submit" value="Place your order" class="btn btn-primary">
+        </form>
+
+</div>
+    
+    
+</body>
+</html>

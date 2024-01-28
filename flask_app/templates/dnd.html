@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>CC-D&D</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerdnd">
+            <div class="headerL"><a href="/sign_in">Register</a> | <a href="/sign_in">Login</a> | <a href="/navigation">Home</a></div>
+            <div class="headerR"><a href="/payment"><img src="{{url_for('static',filename='/pics/shopping/blackcart.png')}}" alt="cart" width="40px"></a><a href="/logout">Logout</a></div>
+        </div>
+        <div class="merch">
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/D&D/guide.webp')}}" alt="pic1">
+                <p>Dungeon Master's Guide Book - $24.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="17">
+                    <input type="hidden" name="name_of_product" value="Dungeon Master's Guide Book">
+                    <input type="hidden" name="price" value="24.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/D&D/0786965606.webp')}}" alt="pic1">
+                <p>Players Hand Book - $24.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="18">
+                    <input type="hidden" name="name_of_product" value="Players Hand Book">
+                    <input type="hidden" name="price" value="24.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/D&D/dice.jpg')}}" alt="pic1">
+                <p>Set of 7 Dice: Blue - $7.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="19">
+                    <input type="hidden" name="name_of_product" value="Set of 7 Dice: Blue">
+                    <input type="hidden" name="price" value="7.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img width="200px" src="{{url_for('static',filename='/pics/D&D/RedDragon.jpg')}}" alt="pic1">
+                <p>Ancient Red Dragon Miniature - $49.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="20">
+                    <input type="hidden" name="name_of_product" value="Ancient Red Dragon Miniature">
+                    <input type="hidden" name="price" value="49.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

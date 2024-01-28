@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>CC-MTG</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerfab">
+            <div class="headerL"><a href="/sign_in">Register</a> | <a href="/sign_in">Login</a> | <a href="/navigation">Home</a></div>
+            <div class="headerR"><a href="/payment"><img src="{{url_for('static',filename='/pics/shopping/blackcart.png')}}" alt="cart" width="40px"></a><a href="/logout">Logout</a></div>
+        </div>
+        <div class="merch">
+            <div class="center">
+                <img width="165px" src="{{url_for('static',filename='/pics/FAB/231040.webp')}}" alt="pic1">
+                <p>Monarch Booster Pack - $4.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="9">
+                    <input type="hidden" name="name_of_product" value="Monarch Booster Pack">
+                    <input type="hidden" name="price" value="4.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img src="{{url_for('static',filename='/pics/FAB/268765.webp')}}" alt="pic1">
+                <p>History Pack 1 Booster Pack - $4.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="10">
+                    <input type="hidden" name="name_of_product" value="History Pack 1 Booster Pack">
+                    <input type="hidden" name="price" value="4.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img width="190px" src="{{url_for('static',filename='/pics/FAB/237758.webp')}}" alt="pic1">
+                <p>Prism Blitz Deck - $19.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="11">
+                    <input type="hidden" name="name_of_product" value="Prism Blitz Deck">
+                    <input type="hidden" name="price" value="19.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            <div class="center">
+                <img width="240px" src="{{url_for('static',filename='/pics/FAB/477233.webp')}}" alt="pic1">
+                <p>Outsiders Booster Box - $54.99</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="id" value="12">
+                    <input type="hidden" name="name_of_product" value="Outsiders Booster Box">
+                    <input type="hidden" name="price" value="54.99">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
